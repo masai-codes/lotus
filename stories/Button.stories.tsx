@@ -17,13 +17,15 @@ const Template: Story<Props> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  colorScheme: 'blue',
-  children: 'I am Primary',
+  variant: 'primary',
+  size: 'sm',
+  children: 'Ended',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  colorScheme: 'gray',
+  variant: 'secondary',
+  size: 'md',
   children: 'I am secondary',
   onClick: action('Secondary action click'),
 };

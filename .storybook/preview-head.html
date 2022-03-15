@@ -1,31 +1,35 @@
+<link
+  href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+  rel="stylesheet"
+/>
 <script>
-  ; (function setColorModeVar(initialValue) {
-    const mql = window.matchMedia("(prefers-color-scheme: dark)")
-    const systemPreference = mql.matches ? "dark" : "light"
+  (function setColorModeVar(initialValue) {
+    const mql = window.matchMedia('(prefers-color-scheme: dark)');
+    const systemPreference = mql.matches ? 'dark' : 'light';
 
-    let persistedPreference
+    let persistedPreference;
 
     try {
-      persistedPreference = localStorage.getItem("chakra-ui-color-mode")
+      persistedPreference = localStorage.getItem('chakra-ui-color-mode');
     } catch (error) {
       console.log(
-        "Chakra UI: localStorage is not available. Color mode persistence might not work as expected",
-      )
+        'Chakra UI: localStorage is not available. Color mode persistence might not work as expected'
+      );
     }
 
-    const isInStorage = typeof persistedPreference === "string"
+    const isInStorage = typeof persistedPreference === 'string';
 
-    let colorMode
+    let colorMode;
 
     if (isInStorage) {
-      colorMode = persistedPreference
+      colorMode = persistedPreference;
     } else {
-      colorMode = initialValue === "system" ? systemPreference : initialValue
+      colorMode = initialValue === 'system' ? systemPreference : initialValue;
     }
 
     if (colorMode) {
-      const root = document.documentElement
-      root.style.setProperty("--chakra-ui-color-mode", colorMode)
+      const root = document.documentElement;
+      root.style.setProperty('--chakra-ui-color-mode', colorMode);
     }
-  })("light")
+  })('light');
 </script>

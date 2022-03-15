@@ -9,5 +9,6 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
 
 /** This is a special button */
 export const Button = ({ children, ...props }: Props) => {
+  // return <ChakraButton {...props}>{children}</ChakraButton>;
   return <ChakraButton {...props}>{children}</ChakraButton>;
 };

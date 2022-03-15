@@ -22,7 +22,8 @@
     "start:concurrent": "concurrently \"tsdx watch\"  \"yarn watch\"",
     "storybook": "start-storybook -p 6006",
     "test": "tsdx test --passWithNoTests",
-    "watch": "nodemon --exec \"yarn push\""
+    "watch": "nodemon --exec \"yarn push\"",
+    "chromatic": "npx chromatic --project-token=ac536865f119"
   },
   "peerDependencies": {
     "@chakra-ui/react": ">=1.6.7",
@@ -59,6 +60,7 @@
   ],
   "devDependencies": {
     "@babel/core": "^7.14.3",
+    "@chakra-ui/core": "^0.8.0",
     "@chakra-ui/react": "^1.6.10",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
@@ -80,6 +82,7 @@
     "@types/react": "^17.0.8",
     "@types/react-dom": "^17.0.5",
     "babel-loader": "^8.2.2",
+    "chromatic": "^6.5.3",
     "concurrently": "^6.2.0",
     "framer-motion": "^6.2.1",
     "husky": "^6.0.0",

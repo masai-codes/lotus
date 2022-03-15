@@ -1,0 +1,226 @@
+export const Heading = {
+  variants: {
+    display: {
+      fontWeight: "800",
+      fontSize: "60px",
+      lineHeight: "80px",
+      fontFamily: "Poppins",
+    },
+    h1: {
+      fontWeight: "800",
+      fontSize: "48px",
+      lineHeight: "62px",
+      fontFamily: "Poppins",
+    },
+    h2: {
+      fontWeight: "700",
+      fontSize: "34px",
+      lineHeight: "40px",
+      fontFamily: "Poppins",
+    },
+    h3: {
+      fontWeight: "700",
+      fontSize: "24px",
+      lineHeight: "32px",
+      fontFamily: "Poppins",
+    },
+    h4: {
+      fontWeight: "700",
+      fontSize: "20px",
+      lineHeight: "28px",
+      fontFamily: "Poppins",
+    },
+    h5: {
+      fontWeight: "700",
+      fontSize: "18px",
+      lineHeight: "24px",
+      fontFamily: "Poppins",
+    },
+    h6: {
+      fontWeight: "700",
+      fontSize: "16px",
+      lineHeight: "20px",
+      fontFamily: "Poppins",
+    },
+  },
+};
+
+export const Colors = {
+  secondary: {
+    blue: {
+      500: "#3470E4",
+    },
+  },
+  "ms-red": {
+    900: "#0A0103",
+    800: "#4F0110",
+    700: "#770119",
+    600: "#CC032A",
+    500: "#ED0331",
+    400: "#FC214C",
+    300: "#FD4D70",
+    200: "#FD90A6",
+    100: "#FEDFE5",
+    50: "#FFFAFB",
+  },
+  "ms-gray": {
+    900: "#21191B",
+    800: "#3B3435",
+    700: "#544D4F",
+    600: "#6C6768",
+    500: "#848081",
+    400: "#9D999A",
+    300: "#B6B3B3",
+    200: "#CECCCD",
+    100: "#E7E6E6",
+    50: "#F3F2F2",
+  },
+  "ms-blue": {
+    900: "#051229",
+    800: "#0B2352",
+    700: "#10357C",
+    600: "#1647A5",
+    500: "#3470E4",
+    400: "#5D8DE9",
+    300: "#85A9EF",
+    200: "#AEC6F4",
+    100: "#D6E2FA",
+    50: "#F2F6FF",
+  },
+  "ms-cyan": {
+    500: "#1A9FBD",
+    400: "#87C8D5",
+    300: "#9FD3DE",
+    200: "#B7DEE6",
+    100: "#CFE9EE",
+    50: "#F2FDFF",
+  },
+  "ms-green": {
+    500: "#6FCD9E",
+    400: "#87D5AE",
+    300: "#9FDEBE",
+    200: "#B7E6CF",
+    100: "#CFEEDF",
+    50: "#EEFFF7",
+  },
+  "ms-yellow": {
+    500: "#FFDB66",
+    400: "#FFE180",
+    300: "#FFE799",
+    200: "#FFEDB3",
+    100: "#FFF3CC",
+    50: "#FFF9E5",
+  },
+  "ms-brick": {
+    500: "#CC926E",
+    400: "#D4A486",
+    300: "#DDB69E",
+    200: "#E5C9B7",
+    100: "#EEDBCF",
+    50: "#F6EDE7",
+  },
+  "ms-error": "#D61E27",
+  "ms-warning": "#FF832B",
+  "ms-info": "#FFBF00",
+  "ms-success": "#00CC6D",
+};
+
+export const TextStyles = {
+  display: {
+    fontWeight: "800",
+    fontSize: "60px",
+    lineHeight: "80px",
+    fontFamily: "Poppins",
+  },
+  h1: {
+    fontWeight: "800",
+    fontSize: "48px",
+    lineHeight: "62px",
+    fontFamily: "Poppins",
+  },
+  h2: {
+    fontWeight: "700",
+    fontSize: "34px",
+    lineHeight: "40px",
+    fontFamily: "Poppins",
+  },
+  h3: {
+    fontWeight: "700",
+    fontSize: "24px",
+    lineHeight: "32px",
+    fontFamily: "Poppins",
+  },
+  h4: {
+    fontWeight: "700",
+    fontSize: "20px",
+    lineHeight: "28px",
+    fontFamily: "Poppins",
+  },
+  h5: {
+    fontWeight: "700",
+    fontSize: "18px",
+    lineHeight: "24px",
+    fontFamily: "Poppins",
+  },
+  h6: {
+    fontWeight: "700",
+    fontSize: "16px",
+    lineHeight: "20px",
+    fontFamily: "Poppins",
+  },
+  subtitle1: {
+    fontWeight: "400",
+    fontSize: "24px",
+    lineHeight: "34px",
+    fontFamily: "Open Sans",
+  },
+  subtitle2: {
+    fontWeight: "600",
+    fontSize: "24px",
+    lineHeight: "34px",
+    fontFamily: "Open Sans",
+  },
+  body1: {
+    fontWeight: "400",
+    fontSize: "16px",
+    lineHeight: "24px",
+    fontFamily: "Open Sans",
+  },
+  body2: {
+    fontWeight: "400",
+    fontSize: "14px",
+    lineHeight: "22px",
+    fontFamily: "Open Sans",
+  },
+  button: {
+    fontWeight: "600",
+    fontSize: ["12px", "14px", "18px"],
+    lineHeight: "24px",
+    fontFamily: "Open Sans",
+  },
+  caption: {
+    fontWeight: "400",
+    fontSize: "12px",
+    lineHeight: "18px",
+    fontFamily: "Open Sans",
+  },
+  overline: {
+    fontWeight: "400",
+    fontSize: "10px",
+    lineHeight: "16px",
+    fontFamily: "Open Sans",
+  },
+};
+
+export const LayerStyles = {
+  base: {
+    bg: "gray.50",
+    border: "2px solid",
+    borderColor: "gray.500",
+  },
+  selected: {
+    bg: "teal.500",
+    color: "teal.700",
+    borderColor: "orange.500",
+  },
+};
