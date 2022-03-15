@@ -19,7 +19,7 @@ export const Primary = Template.bind({});
 Primary.args = {
   variant: 'primary',
   size: 'sm',
-  children: 'Ended',
+  children: 'I am primary button',
 };
 
 export const Secondary = Template.bind({});

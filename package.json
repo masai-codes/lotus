@@ -1,5 +1,5 @@
 {
-  "version": "1.6.2",
+  "version": "1.0.2",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -44,10 +44,9 @@
     "trailingComma": "es5"
   },
   "description": "Masai UI component library designed to work seamlessly with Chakra UI",
-  "name": "lotus",
+  "name": "@masaischool/lotus",
   "author": "Masai Developers",
   "module": "dist/lotus.esm.js",
-  "homepage": "https://github.com/jeanverster/lotus",
   "size-limit": [
     {
       "path": "dist/lotus.cjs.production.min.js",
@@ -100,21 +99,12 @@
     "typescript": "^4.3.2",
     "yalc": "^1.0.0-pre.53"
   },
-  "release": {
-    "branches": [
-      "develop"
-    ],
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      "@semantic-release/changelog",
-      [
-        "@semantic-release/npm",
-        {
-          "npmPublish": false
-        }
-      ],
-      "@semantic-release/git"
-    ]
+
+  "keywords": [
+    "lotus",
+    "masai-school"
+  ],
+  "bugs": {
+    "url": "https://github.com/masai-codes/lotus/issues"
   }
 }
