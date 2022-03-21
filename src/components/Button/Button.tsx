@@ -4,8 +4,15 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
   /** Provide a text for button */
   children?: ReactNode;
   /** Which variant look would you like to use */
-  variant?: 'primary' | 'secondary';
-  size?: 'sm' | 'md' | 'lg';
+  variant?:
+    | 'primary'
+    | 'secondary'
+    | 'secondary-grey'
+    | 'tertiary'
+    | 'tertiary-grey'
+    | 'link'
+    | 'social-media';
+  size?: 'sm' | 'md' | 'lg' | 'block-sm' | 'block-md' | 'block-lg';
   leftIcon?: React.ReactElement;
   rightIcon?: React.ReactElement;
   onlyIcon?: React.ReactElement;

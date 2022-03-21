@@ -2,8 +2,9 @@ import React from 'react';
 import { Meta, Story } from '@storybook/react';
 import BookIcon from '../../src/assets/BookIcon';
 import { Button, Props } from '../../src/components/Button/Button';
+import { Google } from '../../src/assets/icons/components';
 const meta: Meta = {
-  title: 'Components/Buttons/GeneralButton',
+  title: 'Components/Button',
   component: Button,
   argTypes: {
     variant: {
@@ -15,9 +16,13 @@ const meta: Meta = {
         'tertiary',
         'tertiary-grey',
         'link',
+        'social-media',
       ],
     },
-    size: { control: { type: 'select' }, options: ['sm', 'md', 'lg'] },
+    size: {
+      control: { type: 'select' },
+      options: ['sm', 'md', 'lg', 'block-sm', 'block-md', 'block-lg'],
+    },
   },
 };
 export default meta;
@@ -96,6 +101,26 @@ LargeSize.args = {
   children: 'Large Size',
 };
 
+// Small Size Block
+export const SmallSizeBlock = Template.bind({});
+SmallSizeBlock.args = {
+  size: 'block-sm',
+  children: 'Small Size Block',
+};
+
+// Medium Size Block
+export const MediumSizeBlock = Template.bind({});
+MediumSizeBlock.args = {
+  size: 'block-md',
+  children: 'Medium Size Block',
+};
+// Large Size Block
+export const LargeSizeBlock = Template.bind({});
+LargeSizeBlock.args = {
+  size: 'block-lg',
+  children: 'Large Size Block',
+};
+
 /** Icon Positon Stories  *************************************************************/
 
 // No Icon
@@ -130,4 +155,19 @@ export const Disabled = Template.bind({});
 Disabled.args = {
   disabled: true,
   children: 'Disabled',
+};
+
+// Social Media
+export const SocialMedia = Template.bind({});
+SocialMedia.args = {
+  variant: 'social-media',
+  children: 'Continue with Google',
+  leftIcon: <Google boxSize="6" />,
+};
+
+// Social Media Only Icon
+export const SocialMediaOnlyIcon = Template.bind({});
+SocialMediaOnlyIcon.args = {
+  variant: 'social-media',
+  onlyIcon: <Google boxSize="6" />,
 };

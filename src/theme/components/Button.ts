@@ -147,6 +147,25 @@ const Button = {
       _focus: { outline: 'none', boxShadow: 'none' },
       _disabled: { color: 'ms-grey.300' },
     },
+    'social-media': {
+      border: '1px solid',
+      borderColor: 'ms-grey.300',
+      bg: 'white',
+      color: 'ms-red.900',
+      _hover: {
+        bg: 'ms-blue.50',
+        borderColor: 'ms-blue.100',
+        _disabled: { color: 'ms-grey.300' },
+      },
+      _focus: {
+        bg: 'ms-blue.50',
+        outline: 'solid 4px',
+        outlineColor: 'ms-blue.100',
+        boxShadow: 'none',
+        outlineOffset: '0px',
+      },
+      _disabled: { color: 'ms-grey.300' },
+    },
   },
   defaultProps: {
     size: 'md',
