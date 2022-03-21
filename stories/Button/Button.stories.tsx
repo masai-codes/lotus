@@ -126,8 +126,8 @@ OnlyIcon.args = {
 /** Other Stories  *************************************************************/
 
 // Disabled button
-export const DisabledIcon = Template.bind({});
-DisabledIcon.args = {
+export const Disabled = Template.bind({});
+Disabled.args = {
   disabled: true,
   children: 'Disabled',
 };
