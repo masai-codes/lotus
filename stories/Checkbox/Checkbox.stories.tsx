@@ -1,13 +1,13 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 import {
-  RadioButton,
-  Props as RadioButtonProps,
-} from '../../src/components/Radio/RadioButton';
+  Checkbox,
+  Props as CheckboxProps,
+} from '../../src/components/Checkbox/Checkbox';
 
 const meta: Meta = {
-  title: 'Components/Radio/RadioButton',
-  component: RadioButton,
+  title: 'Components/Checkbox/Checkbox',
+  component: Checkbox,
   argTypes: {
     size: {
       control: { type: 'radio' },
@@ -16,7 +16,7 @@ const meta: Meta = {
   },
 };
 export default meta;
-const Template: Story<RadioButtonProps> = (args) => <RadioButton {...args} />;
+const Template: Story<CheckboxProps> = (args) => <Checkbox {...args} />;
 
 /** Size Stories  *************************************************************/
 
@@ -24,18 +24,18 @@ const Template: Story<RadioButtonProps> = (args) => <RadioButton {...args} />;
 export const Regular = Template.bind({});
 Regular.args = {
   size: 'regular',
-  label: 'Regular Radio',
+  label: 'Regular Checkbox',
   support_label: 'Please type the supporting text',
-  value: 'radio_label',
+  value: 'checkbox_label',
 };
 
 // Large
 export const Large = Template.bind({});
 Large.args = {
   size: 'large',
-  label: 'Large Radio',
+  label: 'Large Checkbox',
   support_label: 'Please type the supporting text',
-  value: 'radio_label',
+  value: 'checkbox_label',
 };
 
 /** Label/Support Label Stories  *************************************************************/
@@ -44,31 +44,40 @@ Large.args = {
 export const NoLabel = Template.bind({});
 NoLabel.args = {
   size: 'regular',
-  value: 'radio_label',
+  value: 'checkbox_label',
 };
 
 // No Support Label
 export const NoSupportLabel = Template.bind({});
 NoSupportLabel.args = {
   size: 'regular',
-  label: 'Radio Button',
-  value: 'radio_label',
+  label: 'Checkbox ',
+  value: 'checkbox_label',
+};
+
+// Indeterminate
+export const Indeterminate = Template.bind({});
+Indeterminate.args = {
+  size: 'regular',
+  label: 'Checkbox ',
+  value: 'checkbox_label',
+  isIndeterminate: true,
 };
 
 // Disabled
 export const Disabled = Template.bind({});
 Disabled.args = {
   size: 'regular',
-  label: 'Radio Button',
-  value: 'radio_label',
+  label: 'Checkbox ',
+  value: 'checkbox_label',
   disabled: true,
 };
-
-// Default checked
-export const DefaultChecked = Template.bind({});
-DefaultChecked.args = {
+// Indeterminate Disabled
+export const IndeterminateDisabled = Template.bind({});
+IndeterminateDisabled.args = {
   size: 'regular',
-  label: 'Radio Button',
-  value: 'radio_label',
-  defaultChecked: true,
+  label: 'Checkbox ',
+  value: 'checkbox_label',
+  isIndeterminate: true,
+  disabled: true,
 };

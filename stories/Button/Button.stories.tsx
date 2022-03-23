@@ -8,7 +8,7 @@ const meta: Meta = {
   component: Button,
   argTypes: {
     variant: {
-      control: { type: 'select' },
+      control: { type: 'radio' },
       options: [
         'primary',
         'secondary',
@@ -20,7 +20,7 @@ const meta: Meta = {
       ],
     },
     size: {
-      control: { type: 'select' },
+      control: { type: 'radio' },
       options: ['sm', 'md', 'lg', 'block-sm', 'block-md', 'block-lg'],
     },
   },

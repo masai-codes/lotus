@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, SimpleGrid } from '@chakra-ui/react';
+import { SimpleGrid } from '@chakra-ui/react';
 import { RadioGroup } from '@chakra-ui/react';
 import { RadioButton, Props as RadioButtonProps } from './RadioButton';
 
@@ -28,36 +28,34 @@ export const RadioButtonGroup = ({
 }: Props) => {
   return (
     <>
-      <Box>
-        <RadioGroup
-          onChange={onChange}
-          value={selectedValue}
-          isDisabled={disabled}
-          {...props}
+      <RadioGroup
+        onChange={onChange}
+        value={selectedValue}
+        isDisabled={disabled}
+        {...props}
+      >
+        <SimpleGrid
+          gridTemplateColumns={gridTemplateComlumns}
+          rowGap={rowGap}
+          columnGap={columnGap}
         >
-          <SimpleGrid
-            gridTemplateColumns={gridTemplateComlumns}
-            rowGap={rowGap}
-            columnGap={columnGap}
-          >
-            {options.map((option: RadioButtonProps) => {
-              const finalSize: 'regular' | 'large' | undefined = option.size
-                ? option.size
-                : commonSize;
-              return (
-                <RadioButton
-                  key={option.value}
-                  label={option.label}
-                  support_label={option.support_label}
-                  value={option.value}
-                  disabled={option.disabled}
-                  size={finalSize}
-                />
-              );
-            })}
-          </SimpleGrid>
-        </RadioGroup>
-      </Box>
+          {options.map((option: RadioButtonProps) => {
+            const finalSize: 'regular' | 'large' | undefined = option.size
+              ? option.size
+              : commonSize;
+            return (
+              <RadioButton
+                key={option.value}
+                label={option.label}
+                support_label={option.support_label}
+                value={option.value}
+                disabled={option.disabled}
+                size={finalSize}
+              />
+            );
+          })}
+        </SimpleGrid>
+      </RadioGroup>
     </>
   );
 };

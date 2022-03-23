@@ -11,7 +11,7 @@ const meta: Meta = {
   component: RadioButtonGroup,
   argTypes: {
     commonSize: {
-      control: { type: 'select' },
+      control: { type: 'radio' },
       options: ['regular', 'large'],
     },
   },
@@ -56,9 +56,22 @@ RadioButtonGroupDemo.args = {
   onChange: (value: string) => {
     console.log(value);
   },
-  stackDirection: 'row',
   spacing: '16px',
   gridTemplateComlumns: { base: 'repeat(1,1fr)', md: 'repeat(2,1fr)' },
   columnGap: '16px',
   rowGap: '16px',
+};
+// Disabled
+export const RadioButtonGroupDisabledDemo = Template.bind({});
+RadioButtonGroupDisabledDemo.args = {
+  commonSize: 'regular',
+  options,
+  selectedValue: 'radio-two',
+  onChange: (value: string) => {
+    console.log(value);
+  },
+  spacing: '16px',
+  columnGap: '16px',
+  rowGap: '16px',
+  disabled: true,
 };
