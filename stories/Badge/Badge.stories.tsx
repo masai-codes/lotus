@@ -5,7 +5,16 @@ import { Badge, Props } from '../../src/components/Badge/Badge';
 const meta: Meta = {
   title: 'Components/Badge',
   component: Badge,
-  argTypes: {},
+  argTypes: {
+    variant: {
+      control: { type: 'select' },
+      options: ['red', 'blue', 'purple', 'green', 'cyan', 'brick'],
+    },
+    size: {
+      control: { type: 'select' },
+      options: ['default', 'large', 'default-icon-only', 'large-icon-only'],
+    },
+  },
 };
 export default meta;
 
@@ -95,6 +104,7 @@ export const IconOnly = Template.bind({});
 IconOnly.args = {
   variant: 'blue',
   leftIcon: <AlertCircleOutline />,
+  size: 'default-icon-only',
 };
 
 // Icon Only large size
@@ -102,5 +112,5 @@ export const IconOnlyLarge = Template.bind({});
 IconOnlyLarge.args = {
   variant: 'blue',
   leftIcon: <AlertCircleOutline />,
-  size: 'large',
+  size: 'large-icon-only',
 };
