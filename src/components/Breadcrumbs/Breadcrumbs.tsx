@@ -5,7 +5,7 @@ import { ChevronRight } from '../../assets/icons/components';
 export interface Props {
   list?: { text: string; link: string; isSelected?: boolean }[];
 }
-export const Breadcrumbs = ({ list, ...props }: Props) => {
+export const Breadcrumbs = ({ list }: Props) => {
   return (
     <Breadcrumb
       separator={<ChevronRight boxSize="16px" />}
