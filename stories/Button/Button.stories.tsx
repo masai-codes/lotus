@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import BookIcon from '../../src/assets/BookIcon';
+import { BookIcon } from '../../src/assets/icons/components';
 import { Button, Props } from '../../src/components/Button/Button';
 import { Google } from '../../src/assets/icons/components';
 const meta: Meta = {

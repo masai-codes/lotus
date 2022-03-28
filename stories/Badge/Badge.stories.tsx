@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import AlertCircleOutline from '../../src/assets/AlertCircleOutline';
+import { AlertCircleOutline } from '../../src/assets/icons/components';
 import { Badge, Props } from '../../src/components/Badge/Badge';
 const meta: Meta = {
   title: 'Components/Badge',

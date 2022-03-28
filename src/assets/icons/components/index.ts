@@ -15,7 +15,10 @@ import Slack from './SocialMedia/Slack';
 import Telegram from './SocialMedia/Telegram';
 import Chrome from './SocialMedia/Chrome';
 import ChromeFirefox from './SocialMedia/ChromeFirefox';
-
+// Other
+import AlertCircleOutline from './Others/AlertCircleOutline';
+import BookIcon from './Others/BookIcon';
+import ChevronRight from './Others/ChevronRight';
 export {
   // Social Media Icons
   Chrome,
@@ -34,4 +37,8 @@ export {
   Zoom,
   Slack,
   Telegram,
+  // Other
+  AlertCircleOutline,
+  ChevronRight,
+  BookIcon,
 };
