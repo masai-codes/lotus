@@ -122,9 +122,22 @@ import {
 } from '../../assets/icons/components';
 export interface Props {}
 
-export const AllIcons = ({}: Props) => {
+export const IconsList = ({}: Props) => {
   return (
     <>
+      <Flex alignItems={'center'} mt={'12px'}>
+        <BookIcon boxSize="24px" />
+        <Heading as="h5" ml={'10px'}>
+          {'<BookIcon boxSize="24px" />'}
+        </Heading>
+      </Flex>
+      <Flex alignItems={'center'} mt={'12px'}>
+        <BookIcon boxSize="24px" color="red" />
+        <Heading as="h5" ml={'10px'}>
+          {' <BookIcon boxSize="24px" color="red" />'}
+        </Heading>
+      </Flex>
+
       <Flex alignItems={'center'} mt={'12px'}>
         <Discord />
         <Heading as="h5" ml={'10px'}>
