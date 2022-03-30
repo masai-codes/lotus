@@ -25,7 +25,7 @@ export interface Props {
   /** input field with Leading dropdown */
   leadingDropdown?: boolean | null;
   /** input filed with trailing dropdown */
-  trailingDropDown?: boolean;
+  trailingDropdown?: boolean;
   leadingText?: string;
   helperText?: string | null;
   rightIcon?: ReactElement;
@@ -41,7 +41,7 @@ export interface Props {
   /** Change whether the input is valid or not */
   isInvalid?: boolean;
   /** max length of input */
-  maxlength?: number;
+  maxLength?: number;
   /** InputField getValue callback */
   getValueCallback?: ((value: string) => void) | null;
   /** InputField getFile callback */
@@ -76,7 +76,7 @@ export const Input = ({
   placeholder,
   type,
   leadingDropdown,
-  trailingDropDown,
+  trailingDropdown,
   leadingText,
   rightIcon,
   helperText,
@@ -87,7 +87,7 @@ export const Input = ({
   forVal,
   min,
   max,
-  maxlength,
+  maxLength,
   preFilledValue,
   //   maxFiles = 1,
   //   getFileCallback = null,
@@ -223,7 +223,7 @@ export const Input = ({
               onChange={onInputChange}
               min={min}
               max={max}
-              maxLength={maxlength}
+              maxLength={maxLength}
               id={forVal}
               autoComplete={autocomplete}
               textStyle="body1"
@@ -236,12 +236,12 @@ export const Input = ({
               onClick={onClick}
             />
           )}
-          {(rightIcon || trailingDropDown) && (
+          {(rightIcon || trailingDropdown) && (
             <InputRightElement width="auto" pr="ms-14">
               {' '}
               <HStack spacing="ms-24" p="0">
                 {rightIcon}
-                {trailingDropDown && (
+                {trailingDropdown && (
                   <Select
                     variant="unstyled"
                     size="sm"
@@ -260,7 +260,11 @@ export const Input = ({
             </InputRightElement>
           )}
         </InputGroup>
-        {helperText && <FormHelperText>{helperText}</FormHelperText>}
+        {helperText && (
+          <FormHelperText color={isInvalid ? 'ms-error' : 'ms-grey.300'}>
+            {helperText}
+          </FormHelperText>
+        )}
         {errorMessage && (
           <FormErrorMessage color="ms-error" textStyle="body2">
             {errorMessage}
