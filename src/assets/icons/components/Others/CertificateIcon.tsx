@@ -1,0 +1,17 @@
+import { Icon } from '@chakra-ui/icons';
+import React from 'react';
+interface Props {
+  color?: string;
+  boxSize?: string;
+}
+
+export const CertificateIcon = (props: Props) => (
+  <Icon viewBox="0 0 20 18" {...props}>
+    <path
+      d="M11 18L13 17L15 18V11H11V18ZM15 6V4L13 5L11 4V6L9 7L11 8V10L13 9L15 10V8L17 7L15 6ZM18 0H2C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V12C0 12.5304 0.210714 13.0391 0.585786 13.4142C0.960859 13.7893 1.46957 14 2 14H9V12H2V2H18V12H17V14H18C18.5304 14 19.0391 13.7893 19.4142 13.4142C19.7893 13.0391 20 12.5304 20 12V2C20 1.46957 19.7893 0.960859 19.4142 0.585786C19.0391 0.210714 18.5304 0 18 0ZM9 5H3V3H9V5ZM7 8H3V6H7V8ZM9 11H3V9H9V11Z"
+      fill="currentColor"
+    />
+  </Icon>
+);
+
+export default CertificateIcon;
