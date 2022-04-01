@@ -12,8 +12,9 @@ export const Breadcrumbs = ({ list }: Props) => {
       px={['ms-16', 'ms-24']}
       spacing={['ms-4', 'ms-8']}
     >
-      {list?.map((item) => (
+      {list?.map((item, text) => (
         <BreadcrumbItem
+          key={text}
           textStyle="caption"
           py="ms-8"
           color={item.isSelected ? 'ms-blue.500' : 'ms-grey.700'}
