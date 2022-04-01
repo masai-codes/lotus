@@ -12,7 +12,7 @@ import {
 export interface Props {
   title?: string;
   body: string;
-  trigger: React.ReactNode;
+  trigger: React.ReactElement;
   type?: PlacementWithLogical /* "right", "left", "top", "bottom", "top-start/end", "bottom-start/end" */;
 }
 
