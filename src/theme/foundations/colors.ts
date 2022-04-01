@@ -1,4 +1,4 @@
-const colors = {
+const colors: { [key: string]: string | { [key: string]: string } } = {
   'ms-red': {
     900: '#0A0103',
     800: '#4F0110',

@@ -1,4 +1,4 @@
-const textStyles = {
+const textStyles: { [key: string]: { [key: string]: string } } = {
   subtitle1: {
     fontWeight: '400',
     fontSize: '24px',
