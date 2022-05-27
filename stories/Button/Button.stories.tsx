@@ -157,6 +157,13 @@ Disabled.args = {
   children: 'Disabled',
 };
 
+// Loading button
+export const Loading = Template.bind({});
+Loading.args = {
+  loading: true,
+  children: 'Loading',
+};
+
 // Social Media
 export const SocialMedia = Template.bind({});
 SocialMedia.args = {

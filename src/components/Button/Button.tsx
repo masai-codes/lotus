@@ -1,5 +1,6 @@
 import React, { HTMLAttributes, ReactNode } from 'react';
-import { Button as ChakraButton } from '@chakra-ui/react';
+import { Button as ChakraButton, Spinner } from '@chakra-ui/react';
+
 export interface Props extends HTMLAttributes<HTMLButtonElement> {
   /** Provide a text for button */
   children?: ReactNode;
@@ -17,6 +18,16 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
   rightIcon?: React.ReactElement;
   onlyIcon?: React.ReactElement;
   disabled?: boolean;
+  loading?: boolean;
+  position?:
+    | 'inherit'
+    | 'initial'
+    | 'unset'
+    | 'fixed'
+    | 'absolute'
+    | 'static'
+    | 'relative'
+    | 'sticky';
 }
 
 /** This is a special button */
@@ -25,12 +36,22 @@ export const Button = ({
   variant = 'primary',
   size = 'md',
   onlyIcon,
+  disabled,
+  loading,
+  position,
   ...props
 }: Props) => {
   return (
-    <ChakraButton variant={variant} size={size} {...props}>
+    <ChakraButton
+      disabled={disabled || loading}
+      variant={variant}
+      size={size}
+      position={loading ? 'relative' : position ? position : 'static'}
+      {...props}
+    >
       {onlyIcon && React.cloneElement(onlyIcon)}
       {children}
+      {loading && <Spinner position={'absolute'} color={'ms-blue.500'} />}
     </ChakraButton>
   );
 };
