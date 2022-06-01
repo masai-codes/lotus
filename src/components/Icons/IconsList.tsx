@@ -119,6 +119,7 @@ import {
   CodeTag,
   AccountGroup,
   BookIcon,
+  TwitterSingleTone,
 } from '../../assets/icons/components';
 export interface Props {}
 
@@ -820,6 +821,12 @@ export const IconsList = ({}: Props) => {
         <BookIcon />
         <Heading as="h5" ml={'10px'}>
           {'<BookIcon />'}
+        </Heading>
+      </Flex>
+      <Flex alignItems={'center'} mt={'12px'}>
+        <TwitterSingleTone />
+        <Heading as="h5" ml={'10px'}>
+          {'<TwitterSingleTone />'}
         </Heading>
       </Flex>
     </>

@@ -116,6 +116,7 @@ import CalendarClock from './Others/CalendarClock';
 import CodeTag from './Others/CodeTag';
 import AccountGroup from './Others/CodeTag';
 import BookIcon from './Others/BookIcon';
+import TwitterSingleTone from './Others/TwitterSingleTone';
 
 export {
   // Social Media Icons
@@ -236,4 +237,5 @@ export {
   CodeTag,
   AccountGroup,
   BookIcon,
+  TwitterSingleTone,
 };
