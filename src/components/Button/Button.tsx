@@ -18,7 +18,6 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
   rightIcon?: React.ReactElement;
   onlyIcon?: React.ReactElement;
   disabled?: boolean;
-  loading?: boolean;
   position?:
     | 'inherit'
     | 'initial'
@@ -28,6 +27,13 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
     | 'static'
     | 'relative'
     | 'sticky';
+  loading?: boolean;
+  //The speed of the spinner in case of loading=true, @example ```<Button loading loaderSpeeed="0.2s"/> ```
+  loaderSpeed?: string;
+  //The thickness of the spinner eg: thickness="4px"
+  loaderThickness?: string;
+  // default loaderSize is md
+  loaderSize?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 }
 
 /** This is a special button */
@@ -37,8 +43,11 @@ export const Button = ({
   size = 'md',
   onlyIcon,
   disabled,
-  loading,
   position,
+  loading,
+  loaderSpeed,
+  loaderThickness,
+  loaderSize,
   ...props
 }: Props) => {
   return (
@@ -51,7 +60,15 @@ export const Button = ({
     >
       {onlyIcon && React.cloneElement(onlyIcon)}
       {children}
-      {loading && <Spinner position={'absolute'} color={'ms-blue.500'} />}
+      {loading && (
+        <Spinner
+          speed={loaderSpeed ? loaderSpeed : '0.5s'}
+          thickness={loaderThickness ? loaderThickness : '2px'}
+          size={loaderSize ? loaderSize : 'md'}
+          position={'absolute'}
+          color={'ms-blue.500'}
+        />
+      )}
     </ChakraButton>
   );
 };

@@ -23,6 +23,32 @@ const meta: Meta = {
       control: { type: 'radio' },
       options: ['sm', 'md', 'lg', 'block-sm', 'block-md', 'block-lg'],
     },
+    loading: {
+      control: { type: 'radio' },
+      options: [true, false],
+    },
+    loaderSize: {
+      control: { type: 'radio' },
+      options: ['xs', 'sm', 'md', 'lg', 'xl'],
+    },
+    loaderThickness: {
+      control: { type: 'text' },
+    },
+    loaderSpeed: {
+      control: { type: 'radio' },
+      options: [
+        '0.1s',
+        '0.2s',
+        '0.3s',
+        '0.4s',
+        '0.5s',
+        '0.6s',
+        '0.7s',
+        '0.8s',
+        '0.9s',
+        '1s',
+      ],
+    },
   },
 };
 export default meta;
