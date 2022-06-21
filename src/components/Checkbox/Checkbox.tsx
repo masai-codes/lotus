@@ -67,7 +67,7 @@ export const Checkbox = ({
           </Box>
           {extraReactElement &&
             React.cloneElement(extraReactElement, {
-              onClick: (value: string) => {
+              onClick: () => {
                 extraReactElementValueOnClick &&
                   extraReactElementValueOnClick(value);
               },

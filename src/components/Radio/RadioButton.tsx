@@ -51,8 +51,9 @@ export const RadioButton = ({
         ) : null}
       </Box>
       {extraReactElement &&
+        value &&
         React.cloneElement(extraReactElement, {
-          onClick: (value: string) => {
+          onClick: () => {
             extraReactElementValueOnClick &&
               extraReactElementValueOnClick(value);
           },
