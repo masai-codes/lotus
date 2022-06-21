@@ -17,6 +17,7 @@ export interface Props {
     | { base?: string; md?: string; lg?: string; xl?: string };
   columnGap?: string | string[];
   rowGap?: string | string[];
+  extraReactElement?: React.ReactElement;
 }
 
 export const CheckboxGroup = ({
@@ -28,6 +29,7 @@ export const CheckboxGroup = ({
   gridTemplateComlumns,
   rowGap,
   columnGap,
+  extraReactElement,
   ...props
 }: Props) => {
   const onCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -63,6 +65,7 @@ export const CheckboxGroup = ({
               checked={selectedValues.includes(option.value)}
               onChange={onCheckboxChange}
               disabled={disabled}
+              extraReactElement={extraReactElement}
             />
           );
         })}

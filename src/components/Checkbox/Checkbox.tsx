@@ -11,6 +11,7 @@ export interface Props {
   disabled?: boolean;
   isIndeterminate?: boolean;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  extraReactElement?: React.ReactElement;
 }
 
 export const Checkbox = ({
@@ -23,6 +24,7 @@ export const Checkbox = ({
   support_label,
   disabled,
   isIndeterminate,
+  extraReactElement,
 }: Props) => {
   return (
     <>
@@ -61,6 +63,7 @@ export const Checkbox = ({
               </Text>
             ) : null}
           </Box>
+          {extraReactElement}
         </ChakraCheckbox>
       </Box>
     </>
