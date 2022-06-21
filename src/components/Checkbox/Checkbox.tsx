@@ -12,6 +12,7 @@ export interface Props {
   isIndeterminate?: boolean;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   extraReactElement?: React.ReactElement;
+  extraReactElementValueOnClick?: (value: string) => void;
 }
 
 export const Checkbox = ({
@@ -25,6 +26,7 @@ export const Checkbox = ({
   disabled,
   isIndeterminate,
   extraReactElement,
+  extraReactElementValueOnClick,
 }: Props) => {
   return (
     <>
@@ -63,7 +65,13 @@ export const Checkbox = ({
               </Text>
             ) : null}
           </Box>
-          {extraReactElement}
+          {extraReactElement &&
+            React.cloneElement(extraReactElement, {
+              onClick: (value: string) => {
+                extraReactElementValueOnClick &&
+                  extraReactElementValueOnClick(value);
+              },
+            })}
         </ChakraCheckbox>
       </Box>
     </>

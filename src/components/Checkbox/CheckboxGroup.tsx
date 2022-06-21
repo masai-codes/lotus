@@ -18,6 +18,7 @@ export interface Props {
   columnGap?: string | string[];
   rowGap?: string | string[];
   extraReactElement?: React.ReactElement;
+  extraReactElementValueOnClick?: (value: string) => void;
 }
 
 export const CheckboxGroup = ({
@@ -30,6 +31,7 @@ export const CheckboxGroup = ({
   rowGap,
   columnGap,
   extraReactElement,
+  extraReactElementValueOnClick,
   ...props
 }: Props) => {
   const onCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -66,6 +68,7 @@ export const CheckboxGroup = ({
               onChange={onCheckboxChange}
               disabled={disabled}
               extraReactElement={extraReactElement}
+              extraReactElementValueOnClick={extraReactElementValueOnClick}
             />
           );
         })}

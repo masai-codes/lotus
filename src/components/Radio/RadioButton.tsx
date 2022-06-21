@@ -7,6 +7,8 @@ export interface Props {
   value?: string;
   size?: 'regular' | 'large';
   disabled?: boolean;
+  extraReactElement?: React.ReactElement;
+  extraReactElementValueOnClick?: (value: string) => void;
 }
 export const RadioButton = ({
   label,
@@ -14,6 +16,8 @@ export const RadioButton = ({
   value,
   size = 'regular',
   disabled,
+  extraReactElement,
+  extraReactElementValueOnClick,
   ...props
 }: Props) => {
   return (
@@ -46,6 +50,13 @@ export const RadioButton = ({
           </Text>
         ) : null}
       </Box>
+      {extraReactElement &&
+        React.cloneElement(extraReactElement, {
+          onClick: (value: string) => {
+            extraReactElementValueOnClick &&
+              extraReactElementValueOnClick(value);
+          },
+        })}
     </Radio>
   );
 };

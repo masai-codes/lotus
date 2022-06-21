@@ -14,6 +14,8 @@ export interface Props {
     | { base?: string; md?: string; lg?: string; xl?: string };
   columnGap?: string | string[];
   rowGap?: string | string[];
+  extraReactElement?: React.ReactElement;
+  extraReactElementValueOnClick?: (value: string) => void;
 }
 export const RadioButtonGroup = ({
   options,
@@ -24,6 +26,8 @@ export const RadioButtonGroup = ({
   gridTemplateComlumns,
   rowGap,
   columnGap,
+  extraReactElement,
+  extraReactElementValueOnClick,
   ...props
 }: Props) => {
   return (
@@ -51,6 +55,8 @@ export const RadioButtonGroup = ({
                 value={option.value}
                 disabled={option.disabled}
                 size={finalSize}
+                extraReactElement={extraReactElement}
+                extraReactElementValueOnClick={extraReactElementValueOnClick}
               />
             );
           })}
