@@ -2,7 +2,7 @@ import React from 'react';
 import { Radio } from '@chakra-ui/react';
 import { Box, Text } from '@chakra-ui/react';
 export interface Props {
-  label?: string;
+  label?: string | React.ReactElement;
   support_label?: string;
   value?: string;
   size?: 'regular' | 'large';
