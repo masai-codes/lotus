@@ -24,8 +24,10 @@ export const RadioButton = ({
     <Radio
       d="flex"
       alignItems={'start'}
+      borderColor={'ms-grey.500'}
       _checked={{
         bg: 'ms-blue.500',
+        borderColor: 'inherit',
       }}
       _hover={!disabled ? { borderColor: 'ms-blue.500' } : {}}
       _focus={!disabled ? { borderColor: 'ms-blue.500' } : {}}
