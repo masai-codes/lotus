@@ -27,7 +27,7 @@ export const RadioButton = ({
       borderColor={'ms-grey.500'}
       _checked={{
         bg: 'ms-blue.500',
-        borderColor: 'inherit',
+        borderColor: 'ms-blue.500',
       }}
       _hover={!disabled ? { borderColor: 'ms-blue.500' } : {}}
       _focus={!disabled ? { borderColor: 'ms-blue.500' } : {}}
